@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+@theme {
+  --color-porcelain: #F4F0E8;
+  --color-deep-ink: #1D1C1A;
+  --color-warm-graphite: #68645E;
+  --color-muted-clay: #A8735B;
+  --color-quiet-olive: #707462;
+  --color-warm-taupe: #C8BDAF;
+  --color-soft-linen: #E9E3D9;
+
+  --font-serif: var(--font-cormorant), Cormorant Garamond, Georgia, serif;
+  --font-sans: var(--font-manrope), Manrope, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+:root {
+  --background: #F4F0E8;
+  --foreground: #1D1C1A;
+}
+
+body {
+  background-color: #F4F0E8;
+  color: #1D1C1A;
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  letter-spacing: -0.01em;
+  overflow-x: hidden;
+}
+
+.font-serif {
+  font-family: var(--font-cormorant), Georgia, serif;
+}
+
+.font-sans {
+  font-family: var(--font-manrope), -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* Custom luxury transitions & aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F4F0E8;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #C8BDAF;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #A8735B;
+}
+
+/* Focus styling */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 1.5px solid #1D1C1A;
+  outline-offset: 2px;
+}
