@@ -4,8 +4,8 @@ import Button from "@/components/ui/Button";
 
 export default function EditorialHero() {
   return (
-    <section className="relative w-full min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center overflow-hidden bg-[#F4F0E8]">
-      {/* Background Atmosphere Image */}
+    <section className="relative w-full min-h-[85vh] sm:min-h-[90vh] flex items-end overflow-hidden bg-[#1D1C1A]">
+      {/* 1. Full-Width Background Atmosphere Image */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/editorial/brand-hero.jpg"
@@ -13,48 +13,42 @@ export default function EditorialHero() {
           fill
           priority
           sizes="100vw"
-          className="object-cover object-center opacity-85"
+          className="object-cover object-center"
         />
-        {/* Soft natural gradient overlay to enhance typography contrast while maintaining warm light */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[#F4F0E8] via-[#F4F0E8]/40 to-transparent" />
-        <div className="absolute inset-0 bg-[#F4F0E8]/20" />
+        {/* Soft atmospheric gradient overlay for readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#1D1C1A]/85 via-[#1D1C1A]/30 to-transparent" />
       </div>
 
-      {/* Content Container */}
-      <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center py-20">
-        <span className="inline-block text-[11px] sm:text-xs font-sans uppercase tracking-[0.3em] text-[#1D1C1A] mb-4 sm:mb-6 font-medium">
-          Contemporary Fragrance House
-        </span>
+      {/* 2. Minimalist Bottom-Aligned Content */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pb-14 sm:pb-20 pt-32">
+        <div className="max-w-2xl">
+          <span className="inline-block text-[11px] sm:text-xs font-sans uppercase tracking-[0.3em] text-[#F4F0E8]/80 mb-4 font-medium">
+            Contemporary Fragrance House
+          </span>
 
-        <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#1D1C1A] font-normal tracking-tight leading-[1.1] mb-6 sm:mb-8">
-          Fragrance for the spaces between moments.
-        </h1>
+          <h1 className="font-serif text-4xl sm:text-6xl md:text-7xl text-[#F4F0E8] font-normal tracking-tight leading-[1.08] mb-8 drop-shadow-xs">
+            Fragrance for the spaces between moments.
+          </h1>
 
-        <p className="font-sans text-sm sm:text-base md:text-lg text-[#1D1C1A]/90 max-w-2xl mx-auto font-light leading-relaxed mb-8 sm:mb-10">
-          RAPHÈLO creates contemporary scents shaped by memory, atmosphere, and the quiet details of everyday life.
-        </p>
-
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button href="/shop" size="lg" className="w-full sm:w-auto">
-            Explore Fragrances
-          </Button>
-          <Button
-            href="/about"
-            variant="outline"
-            size="lg"
-            className="w-full sm:w-auto bg-[#F4F0E8]/70 backdrop-blur-xs"
-          >
-            Discover RAPHÈLO
-          </Button>
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <Button
+              href="/shop"
+              variant="white"
+              size="lg"
+              className="w-full sm:w-auto shadow-md"
+            >
+              Explore Fragrances
+            </Button>
+            <Button
+              href="/discovery-sets"
+              variant="white-outline"
+              size="lg"
+              className="w-full sm:w-auto"
+            >
+              Sample Discovery Set
+            </Button>
+          </div>
         </div>
-      </div>
-
-      {/* Subtle bottom scroll indicator */}
-      <div className="absolute bottom-6 left-1/2 -translate-x-1/2 z-10 hidden sm:flex flex-col items-center gap-2">
-        <span className="text-[10px] uppercase tracking-[0.25em] text-[#68645E]">
-          Explore
-        </span>
-        <div className="w-px h-8 bg-[#1D1C1A]/40 animate-pulse" />
       </div>
     </section>
   );

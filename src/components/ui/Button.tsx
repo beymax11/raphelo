@@ -3,7 +3,14 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: "primary" | "secondary" | "outline" | "ghost" | "clay";
+  variant?:
+    | "primary"
+    | "secondary"
+    | "outline"
+    | "ghost"
+    | "clay"
+    | "white"
+    | "white-outline";
   size?: "sm" | "md" | "lg";
   href?: string;
   fullWidth?: boolean;
@@ -39,6 +46,10 @@ export default function Button({
       "text-[#1D1C1A] hover:text-[#A8735B] underline-offset-8 hover:underline bg-transparent px-2",
     clay:
       "bg-[#A8735B] text-[#F4F0E8] hover:bg-[#8e5e49] active:bg-[#A8735B]",
+    white:
+      "bg-[#F4F0E8] text-[#1D1C1A] hover:bg-[#FFFFFF] hover:shadow-md active:bg-[#E9E3D9]",
+    "white-outline":
+      "border border-[#F4F0E8]/70 text-[#F4F0E8] bg-transparent hover:bg-[#F4F0E8] hover:text-[#1D1C1A] backdrop-blur-xs",
   };
 
   const classes = cn(
